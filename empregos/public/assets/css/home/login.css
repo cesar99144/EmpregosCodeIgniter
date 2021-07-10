@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+
+body{
+
+   
+}
+
+section#areaLogin{
+
+    background: white;
+    width: 50rem;
+    height: 30rem;
+    /*border: 1px solid;*/
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 30px;
+}
+
+div#titulo{
+
+    width: 300px;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+div#titulo h3{
+
+    font-size: 22pt;
+}
+
+.itens-form{
+    
+    width: 20rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+div#campoEmail{
+
+    margin-top: 3rem;
+}
+
+.titulo-form{
+
+    
+}
+
+.text-label{
+
+    font-size: 17pt;
+
+}
+
+.entrada-valor{
+
+    width:350px;
+    padding: 10px;
+}
+
+#forms-buttons-area{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-form{
+
+    width: 140px;
+}
