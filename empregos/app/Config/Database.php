@@ -36,7 +36,7 @@ class Database extends Config
 		'username' => 'root',
 		'password' => '12345',
 		'database' => 'empregosconecta',
-		'DBDriver' => 'MySQLi',
+		'DBDriver' => 'mysqli',
 		'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
