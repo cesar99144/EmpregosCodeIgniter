@@ -24,8 +24,8 @@
                 </nav>
             </div>
             <div class="topoItens">
-                <a href="<?php echo base_url();?>/home/login" class="btn btn-light btn-sm">Login</a>
-                <a href="<?php echo base_url();?>/home/cadastro" class="btn btn-danger btn-sm">Cadastro</a>
+                <a href="<?php echo base_url();?>/login" class="btn btn-light btn-sm">Login</a>
+                <a href="<?php echo base_url();?>/cadastro" class="btn btn-danger btn-sm">Cadastro</a>
             </div>
         </div>
         <div id="text-div">
