@@ -14,4 +14,9 @@ class Home extends BaseController
 
 		return view('home/cadastro');
 	}
+
+	public function login(){
+
+		return view('home/login');
+	}
 }
