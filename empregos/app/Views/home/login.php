@@ -35,7 +35,7 @@
                 <a href="" class="btn btn-info">Login</a>
             </div>
             <div class="buttons-form">
-                <a href="<?php echo base_url(); ?>home">Voltar</a>
+                <a href="<?php echo base_url(); ?>/">Voltar</a>
             </div>
         </div>
     </section>
