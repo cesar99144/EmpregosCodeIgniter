@@ -11,6 +11,12 @@
         <input type="text" name="nome" placeholder="Nome"><br>
         <input type="text" name="sobrenome" placeholder="Sobrenome"><br>
         <input type="text" name="cnpj" placeholder="CNPJ da empresa em que você representa"><br>
+        <select name="" id="">
+            <option onselect="" value="">Nível de representação</option>
+            <option value="RH">Departamento RH</option>
+            <option value="Ceo">CEO</option>
+            <option value="Gerente">Gerente</option>
+        </select><br>
         <input type="email" name="email" placeholder="Email"><br>
         <input type="password" name="senha" placeholder="Senha"><br>
         <input type="submit" value="Cadastrar">
