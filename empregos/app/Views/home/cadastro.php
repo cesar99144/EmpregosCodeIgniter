@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="<?php echo base_url();?>/usuario/cadastro" method="POST">
         <input type="text" name="nome" placeholder="Nome"><br>
         <input type="text" name="sobrenome" placeholder="Sobrenome"><br>
         <input type="text" name="cnpj" placeholder="CNPJ da empresa em que você representa"><br>
-        <select name="" id="">
+        <select name="nivelRepresentante" id="">
             <option onselect="" value="">Nível de representação</option>
             <option value="RH">Departamento RH</option>
             <option value="Ceo">CEO</option>
