@@ -12,7 +12,7 @@
         <input type="text" name="sobrenome" placeholder="Sobrenome"><br>
         <input type="text" name="cnpj" placeholder="CNPJ da empresa em que você representa"><br>
         <select name="nivelRepresentante" id="">
-            <option onselect="" value="">Nível de representação</option>
+            <option value="RH">Nível de representação</option>
             <option value="RH">Departamento RH</option>
             <option value="Ceo">CEO</option>
             <option value="Gerente">Gerente</option>
