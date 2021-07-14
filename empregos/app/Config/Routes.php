@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->get('/cadastro', 'Home::cadastro');
+$routes->post('/usuario/cadastro', 'Usuario::cadastrarUsuario');
 
 /*
  * --------------------------------------------------------------------
