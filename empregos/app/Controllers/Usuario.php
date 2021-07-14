@@ -16,13 +16,15 @@ class Usuario extends BaseController{
             $usuariosModel->set('email', $this->request->getPost('email'));
             $usuariosModel->set('senha', $this->request->getPost('senha'));
 
+            $nivel = $this->request->getPost('nivelRepresentante');
+
             if($usuariosModel->insert()){
 
                 //Caso consiga salvar os dados
-
+                
             }else{
 
-                
+
             }
         }
     }
