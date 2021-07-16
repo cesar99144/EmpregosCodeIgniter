@@ -13,13 +13,13 @@
         <div id="titulo">
             <h3>Área do recrutador</h3>
         </div>
-        <form action="">
+        <form action="<?php echo base_url(); ?>/autenticar"  method="POST">
         <div class="itens-form">
             <div id="campoEmail" class="titulo-form">
                 <label class="text-label" for="">Email</label>
             </div>
             <div class="input-form">
-                <input class="entrada-valor" type="email">
+                <input class="entrada-valor" name="email" type="email">
             </div>
         </div>
         <div class="itens-form">
@@ -27,17 +27,18 @@
                 <label class="text-label" for="">Senha</label>
             </div>
             <div class="input-form">
-                <input class="entrada-valor" type="password">
+                <input class="entrada-valor" name="senha" type="password">
             </div>
         </div>
         <div id="forms-buttons-area" class="itens-form">
             <div class="buttons-form">
-                <a href="" class="btn btn-info">Login</a>
+                <input type="submit" class="btn btn-info"  value="Login">
             </div>
             <div class="buttons-form">
                 <a href="<?php echo base_url(); ?>/">Voltar</a>
             </div>
         </div>
+        </form>
     </section>
 </body>
 </html>
