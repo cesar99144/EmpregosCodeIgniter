@@ -38,6 +38,10 @@ $routes->get('/cadastro', 'HomeController::cadastro');
 $routes->post('/usuario/cadastro', 'UsuarioController::cadastrarUsuario');
 $routes->post('/autenticar', 'LoginController::autenticar');
 
+$routes->resource('categorias');
+$routes->resource('empresas');
+$routes->resource('candidatos');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
