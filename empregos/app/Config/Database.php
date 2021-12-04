@@ -35,7 +35,7 @@ class Database extends Config
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '12345',
-		'database' => 'empregosconecta',
+		'database' => 'empregos',
 		'DBDriver' => 'mysqli',
 		'DBPrefix' => '',
 		'pConnect' => false,
