@@ -16,4 +16,38 @@ class Candidatos extends ResourceController{
 
         return $this->respond($data);
     }
+
+    public function create(){
+
+        $modelCandidatos = new CandidatosModel;
+        $data = $this->request->getJSON();
+
+        $senhaHash = password_hash($this->request->getPost('senha'), PASSWORD_DEFAULT);
+ 
+        // $modelCandidatos->set('nome', $this->request->getPost('nome'));
+        // $modelCandidatos->set('sobrenome', $this->request->getPost('sobrenome'));
+        // $modelCandidatos->set('email', $this->request->getPost('email'));
+        // $modelCandidatos->set('senha', $senhaHash);
+
+        if($modelCandidatos->insert($data)){
+            $response = [
+                'status'   => 201,
+                'error'    => null,
+                'messages' => [
+                    'success' => 'Dados salvos'
+                ]
+            ];
+            return $this->respondCreated($response);
+        }else{
+return $this->fail($model->errors());
+            
+        }
+
+        
+    }
+
+    public function login(){
+
+        
+    }
 }
