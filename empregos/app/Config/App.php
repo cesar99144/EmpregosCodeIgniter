@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost:8080/';
+	public $baseURL = 'http://192.168.1.7:8081/';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -61,7 +61,7 @@ class App extends BaseConfig
 	 * --------------------------------------------------------------------------
 	 * Default Locale
 	 * --------------------------------------------------------------------------
-	 *
+	 *s
 	 * The Locale roughly represents the language and location that your visitor
 	 * is viewing the site from. It affects the language strings and other
 	 * strings (like currency markers, numbers, etc), that your program
