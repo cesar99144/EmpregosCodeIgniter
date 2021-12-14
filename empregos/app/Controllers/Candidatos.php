@@ -39,7 +39,7 @@ class Candidatos extends ResourceController{
             ];
             return $this->respondCreated($response);
         }else{
-return $this->fail($model->errors());
+            return $this->fail($model->errors());
             
         }
 
@@ -48,6 +48,10 @@ return $this->fail($model->errors());
 
     public function login(){
 
-        
+        $modelCandidatos = new CandidatosModel;
+
+        $emailUser = $this->request->getPost('nome');
+        $senhaUser = $this->request->getPost('senha');
+
     }
 }
