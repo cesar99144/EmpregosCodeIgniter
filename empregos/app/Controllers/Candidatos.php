@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\CandidatosModel;
+use App\Auth;
 
 class Candidatos extends ResourceController{
 
@@ -48,10 +49,32 @@ class Candidatos extends ResourceController{
 
     public function login(){
 
-        $modelCandidatos = new CandidatosModel;
+       $loginUsuario = Auth::loginCandidatoApp('cesar@gmail.com', '1234');
 
-        $emailUser = $this->request->getPost('nome');
-        $senhaUser = $this->request->getPost('senha');
+       if($loginUsuario):
+
+            $response = [
+                'status'   => 200,
+                'error'    => null,
+                'messages' => [
+                    'success' => 'Logado'
+                ]
+            ];
+            
+            return $this->respondCreated($response);
+
+       else:
+
+        $response = [
+            'status'   => 401,
+            'messages' => [
+                'success' => 'Falha'
+            ]
+        ];
+        
+        return $this->respondCreated($response);
+
+       endif;
 
     }
 }
