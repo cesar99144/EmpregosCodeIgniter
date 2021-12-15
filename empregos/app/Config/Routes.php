@@ -40,6 +40,8 @@ $routes->post('/autenticar', 'LoginController::autenticar');
 
 $routes->resource('categorias');
 $routes->resource('empresas');
+
+$routes->get('/candidatos/login', 'Candidatos::login');
 $routes->resource('candidatos');
 
 /*
