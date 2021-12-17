@@ -54,9 +54,9 @@ class Candidatos extends ResourceController{
 
        $data = $this->request->getJSON();
 
-       //$loginUsuario = Auth::loginCandidatoApp($email, $senha);
-       $loginUsuario = Auth::loginCandidatoApp($data['email'], $data['senha']);
-
+       $loginUsuario = Auth::loginCandidatoApp($data->email, $data->senha);
+       //$loginUsuario = Auth::loginCandidatoApp("cesar@gmail.com", "1234");
+       
        if($loginUsuario):
 
             $response = [
@@ -74,11 +74,12 @@ class Candidatos extends ResourceController{
         $response = [
             'status'   => 401,
             'messages' => [
-                'erro' => $data
+                'erro' => $data->email
             ]
         ];
         
         return $this->respondCreated($response);
+
 
        endif;
 
