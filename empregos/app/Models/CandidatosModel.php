@@ -20,4 +20,5 @@ class CandidatosModel extends Model{
         'areaPretendida',
         'faixaSalarialPretendida'
     ];
+
 }
