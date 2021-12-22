@@ -42,6 +42,7 @@ $routes->resource('categorias');
 $routes->resource('empresas');
 
 $routes->post('/candidatos/login', 'Candidatos::login');
+$routes->post('/candidatos/finalizarCadastro', 'Candidatos::complementarCadastro');
 $routes->resource('candidatos');
 
 /*
