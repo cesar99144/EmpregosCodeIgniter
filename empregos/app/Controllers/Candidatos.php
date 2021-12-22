@@ -18,6 +18,20 @@ class Candidatos extends ResourceController{
         return $this->respond($data);
     }
 
+    public function show($id = null){
+
+        $modelCandidatos = new CandidatosModel();
+        //$data = $modelCandidatos->getWhere(['idCandidato' => $id])->getResult();
+        $data = $modelCandidatos->where('idCandidato', $id)->first();
+
+        if($data){
+            return $this->respond($data);
+        }
+        
+        return $this->failNotFound('Nenhum dado encontrado com'.$id);        
+    
+    }
+
     public function create(){
 
         $modelCandidatos = new CandidatosModel;
@@ -49,6 +63,8 @@ class Candidatos extends ResourceController{
 
     public function login(){
 
+       $modelCandidatos = new CandidatosModel;
+
        $email = $this->request->getPost('email');
        $senha = $this->request->getPost('senha');
 
@@ -57,11 +73,15 @@ class Candidatos extends ResourceController{
        $loginUsuario = Auth::loginCandidatoApp($data->email, $data->senha);
        //$loginUsuario = Auth::loginCandidatoApp("cesar@gmail.com", "1234");
        
+       //$retornoUser = $modelCandidatos->getWhere(['email' => $data->email])->getResult();
+        
+       $retornoUser = $modelCandidatos->where('email', $data->email)->first();
+       
        if($loginUsuario):
 
             $response = [
                 'status'   => 200,
-                'error'    => null,
+                'idUser' => $retornoUser['idCandidato'],
                 'messages' => [
                     'success' => 'Logado'
                 ]
@@ -84,4 +104,26 @@ class Candidatos extends ResourceController{
        endif;
 
     }
+
+    public function complementarCadastro($id = null){
+        
+        $modelCandidatos = new CandidatosModel;
+        $data = $this->request->getJSON();
+
+        if($model->update($id, $data)){
+            $response = [
+                'status'   => 200,
+                'error'    => null,
+                'messages' => [
+                    'success' => 'Dados atualizados'
+                    ]
+            ];
+
+            return $this->respond($response);
+
+        };
+
+        return $this->fail($model->errors());
+    }
+    
 }
