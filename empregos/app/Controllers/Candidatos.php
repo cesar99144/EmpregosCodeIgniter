@@ -105,25 +105,6 @@ class Candidatos extends ResourceController{
 
     }
 
-    public function complementarCadastro($id = null){
-        
-        $modelCandidatos = new CandidatosModel;
-        $data = $this->request->getJSON();
-
-        if($model->update($id, $data)){
-            $response = [
-                'status'   => 200,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Dados atualizados'
-                    ]
-            ];
-
-            return $this->respond($response);
-
-        };
-
-        return $this->fail($model->errors());
-    }
+   
     
 }
