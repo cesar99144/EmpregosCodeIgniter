@@ -93,6 +93,7 @@ class Candidatos extends ResourceController{
 
         $response = [
             'status'   => 401,
+            
             'messages' => [
                 'erro' => $data->email
             ]
