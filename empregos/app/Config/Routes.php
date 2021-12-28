@@ -44,6 +44,11 @@ $routes->resource('empresas');
 $routes->post('/candidatos/login', 'Candidatos::login');
 $routes->resource('candidatos');
 
+$routes->get('/vagas/recentes', 'Vagas::vagasRecentes');
+$routes->resource('vagas');
+
+$routes->resource('vagasCandidaturas');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
