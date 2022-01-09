@@ -47,7 +47,9 @@ $routes->resource('candidatos');
 $routes->get('/vagas/recentes', 'Vagas::vagasRecentes');
 $routes->resource('vagas');
 
-$routes->resource('vagasCandidaturas');
+$routes->resource('vagascandidaturas');
+
+$routes->get('/dashboard', 'Dashboard::home');
 
 /*
  * --------------------------------------------------------------------

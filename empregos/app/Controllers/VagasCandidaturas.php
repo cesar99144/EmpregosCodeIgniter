@@ -9,6 +9,14 @@ class VagasCandidaturas extends ResourceController{
 
     use ResponseTrait;
 
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = db_connect(); // Loading database
+        // OR $this->db = \Config\Database::connect();
+    }
+
     public function index(){
 
         echo "Teste";
@@ -26,7 +34,7 @@ class VagasCandidaturas extends ResourceController{
                 'status'   => 201,
                 'error'    => null,
                 'messages' => [
-                    'success' => 'Dados salvos'
+                    'success' => 'candidatadoSucesso'
                 ]
             ];
             return $this->respondCreated($response);
@@ -36,5 +44,21 @@ class VagasCandidaturas extends ResourceController{
             return $this->fail($model->errors());
             
         }
+    }
+
+    public function show($id = null){
+
+        $vagasCandidaturasModel = new VagasCandidaturasModel();
+
+        // $data = $vagasCandidaturasModel->where('candidatoId', $id)->findAll();
+        $data = $vagasCandidaturasModel->where('candidatoId', $id)->join('vagas', 'vagascandidaturas.    vagaId = vagas.idVaga')->findAll();
+
+        if($data){
+            return $this->respond($data);
+        }
+        
+        return $this->failNotFound('Nenhum dado encontrado com'.$id);
+
+
     }
 }

@@ -22,11 +22,6 @@ class CreateVagasCandidatos extends Migration
             'candidatoId' => [
                 'type' => 'INT',
             ],
-
-            'dataCandidatura' => [
-                'type' => 'DATE',
-                'default' => NULL
-            ],
         ]);
 
         $this->forge->addPrimaryKey('idCandidatura', TRUE);

@@ -1,89 +1,21 @@
 *{
     margin: 0;
 }
-header{
+#topoBar{
 
     background: #0088f5;
-    height: 15rem;
-    text-align: center;
-}
-
-div#itens{
-
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 1rem;
-}
-
-h3#tituloLogo{
-
-    color: white;
-}
-
-nav#menu ul{
-
 
 }
 
-nav#menu li{
+.nav-link{
 
-    display: inline;
-    list-style-type: none;
-    margin: 5px;
-    
+    font-size: 15pt;
+    font-weight: bold;
 }
 
-.links{
+#apresentacao{
 
-    color: white;
-    text-decoration: none;
+    /* background: #0088f5; */
+    height: 35rem;
 }
 
-div#text-div{
-
-    margin-top: 3rem;
-}
-
-h3#text-apresentacao{
-
-    font-size: 25pt;
-
-}
-
-div#buttons-top{
-
-    margin-top: 1rem;
-}
-
-section#painel{
-
-    width: 80rem;
-    padding: 10px;
-    padding-left: 1rem;
-    margin: auto;
-    margin-top: 2rem;
-    display: flex;
-    
-}
-
-div#categorias{
-
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    
-}
-
-div#vagas{
-
-    padding: 20px;
-    width: 70rem;
-   
-}
-
-table{
-
-    
-}

@@ -7,5 +7,5 @@ class VagasCandidaturasModel extends Model{
 
     protected $table = 'vagascandidaturas';
     protected $primaryKey = 'idCandidatura';
-    protected $allowedFields = ['vagaId', 'candidatoId', 'dataCandidatura'];
+    protected $allowedFields = ['vagaId', 'candidatoId'];
 } 
