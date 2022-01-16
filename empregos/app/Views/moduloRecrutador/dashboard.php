@@ -19,9 +19,10 @@
             <h4>Módulo empresa</h4>
             <ul>
                 <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fas fa-sticky-note"></i>Vagas</a></li>
-                <li><a href="#"><i class="fas fa-address-card"></i>Processo abertos</a></li>
-                <li><a href="#"><i class="fas fa-users"></i>Candidatos</a></li>
+                <li class=""><a class="" href="<?php echo base_url(); ?>/dashboard"><i class="fas fa-sticky-note"></i>Vagas</a></li>
+                <li><a href="<?php echo base_url(); ?>/dashboard/vagas/cadastrar"><i class="fas fa-plus"></i>Cadastrar vaga</a></li>
+                <li><a href="<?php echo base_url(); ?>/dashboard/vagas/abertas"><i class="fas fa-address-card"></i>Processo abertos</a></li>
+                <li><a href="<?php echo base_url(); ?>/dashboard/candidatos"><i class="fas fa-users"></i>Candidatos</a></li>
 
             </ul> 
             
@@ -33,7 +34,7 @@
                 </div>
                 
                 <div>
-                    Olá, César
+                    Olá, <?php echo session()->nomeUser; ?>
                 </div>
                 
             </div>  
