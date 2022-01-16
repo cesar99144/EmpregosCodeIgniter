@@ -35,8 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'HomeController::index');
 $routes->get('/login', 'HomeController::login');
 $routes->get('/cadastro', 'HomeController::cadastro');
-$routes->post('/usuario/cadastro', 'UsuarioController::cadastrarUsuario');
-$routes->post('/autenticar', 'LoginController::autenticar');
+$routes->post('/usuario/cadastro', 'Usuario::cadastrarUsuario');
+$routes->post('/autenticar', 'Usuario::login');
 
 $routes->resource('categorias');
 $routes->resource('empresas');
@@ -50,6 +50,10 @@ $routes->resource('vagas');
 $routes->resource('vagascandidaturas');
 
 $routes->get('/dashboard', 'Dashboard::home');
+$routes->get('/dashboard/vagas/abertas', 'Dashboard::telaVagasAbertas');
+$routes->get('/dashboard/vagas/cadastrar', 'Dashboard::telaCadastrarVagas');
+$routes->get('/dashboard/candidatos', 'Dashboard::telaPesquisarCandidatos');
+
 
 /*
  * --------------------------------------------------------------------
