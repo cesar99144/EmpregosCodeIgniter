@@ -37,11 +37,16 @@ class Usuarios extends Migration
 
 			'senha' => [
 				'type' => 'VARCHAR',
-				'constraint' => 40
+				'constraint' => 200
 			],
 
             'empresaId' => [
                 'type' => 'INT',
+            ],
+
+            'statusUsuario' => [
+                'type' => 'VARCHAR',
+				'constraint' => 40
             ],
 		]);
 
