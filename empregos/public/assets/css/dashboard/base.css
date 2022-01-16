@@ -62,6 +62,16 @@ body{
 .wrapper .sidebar ul li:hover{
   background-color: #fff;
 }
+
+.active{
+  background-color: #fff;
+  
+}
+
+.activeText{
+
+  color: #3498db;
+}
     
 .wrapper .sidebar ul li:hover a{
   color: #3498db;
