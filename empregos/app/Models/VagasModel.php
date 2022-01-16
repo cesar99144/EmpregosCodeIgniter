@@ -18,15 +18,11 @@ class VagasModel extends Model{
         'empresaId',
         'statusVisibilidade'
     ];
+    protected $returnType = 'object';
 
-    public function getVagas(){
+    public function getVagasModoAdmin($idempresa){
 
-    	$this->join('vagas', 'vagas.empresaId = empresas.idEmpresa');
-		$this->select('vagas');
-		$this->select('empresas');
-
-		$result = $this->findAll();
-
-		return $result;
+        
+    	
     }
 }
