@@ -19,7 +19,7 @@
                 <label class="text-label" for="">Email</label>
             </div>
             <div class="input-form">
-                <input class="entrada-valor" name="email" type="email">
+                <input class="entrada-valor" name="userEmail" type="email">
             </div>
         </div>
         <div class="itens-form">
@@ -27,7 +27,7 @@
                 <label class="text-label" for="">Senha</label>
             </div>
             <div class="input-form">
-                <input class="entrada-valor" name="senha" type="password">
+                <input class="entrada-valor" name="userSenha" type="password">
             </div>
         </div>
         <div id="forms-buttons-area" class="itens-form">

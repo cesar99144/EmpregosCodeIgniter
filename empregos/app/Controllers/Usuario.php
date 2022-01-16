@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Controllers;
+use App\Auth;
 
-class UsuarioController extends BaseController{
+class Usuario extends BaseController{
 
     public function cadastrarUsuario(){
 
@@ -27,5 +28,31 @@ class UsuarioController extends BaseController{
 
             }
         }
+    }
+
+    public function login(){
+
+        if($this->request->getMethod() === 'post'):
+
+			$login = Auth::loginRecrutador($this->request->getPost('userEmail'), $this->request->getPost('userSenha'));
+
+            if($login):
+                //echo "Logou";
+                return redirect()->to('/dashboard');
+
+            else:
+
+                echo "Não Logou";
+                //return redirect('/login');
+            endif;
+            
+			
+		/*else: 
+
+			$mensagem[] = "Preencha os campos";
+
+			$this->view('home/login', $dados = ['mensagem' => $mensagem]);*/
+
+		endif;
     }
 }
