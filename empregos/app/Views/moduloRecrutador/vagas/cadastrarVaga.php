@@ -12,11 +12,11 @@
     </div>
 
     <div class="container">
-        <form>
+        <form action="<?php echo base_url(); ?>/vagas/create" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="tituloVaga">Título vaga</label>
-                    <input type="email" class="form-control" name="tituloVaga" id="tituloVaga">
+                    <input type="text" class="form-control" name="tituloVaga" id="tituloVaga">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="descricaoVaga">Descrição vaga</label>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="descricaoVaga">Regime contratação</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" name="RegimeContratacao" class="form-control">
                         <option>CLT</option>
                         <option>Contrato</option>
                         <option>PJ</option>
@@ -32,11 +32,11 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="tituloVaga">Carga horária</label>
-                    <input type="time" class="form-control" name="tituloVaga" id="tituloVaga">          
+                    <input type="time" class="form-control" name="cargaHoraria" id="descricaoVaga">          
                 </div>
                 <div class="form-group col-md-2">
                     <label for="descricaoVaga">Tipo de presença</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" name="tipoPresenca" class="form-control">
                         <option>Presencial</option>
                         <option>Híbrido</option>
                         <option>Remoto</option>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="descricaoVaga">Faixa salárial</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" name="faixaSalarial" class="form-control">
                         <option value="Não informado">Não informar</option>
                         <option>R$ 1.100 até R$ 2.200</option>
                         <option>R$ 2.300 até R$ 3.000</option>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="descricaoVaga">Categorias</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" name="categoriaId" class="form-control">
                         <?php foreach($listagemCategorias as $categoria): ?>
                             <option value="<?php echo $categoria->idCategoria; ?>"><?php echo $categoria->tituloCategoria; ?></option>
                         <?php endforeach; ?>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="descricaoVaga">Status vaga</label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" name="status" class="form-control">
                         <option>Aberta</option>
                         <option>Fechada</option>
                     </select>
