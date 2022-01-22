@@ -3,8 +3,8 @@
 Módulo gerencial e api para o projeto <a href="https://github.com/cesar99144/AppEmpregos-ReactNative" target="_blank">App empregos</a>.
 
 <p float="left">
-    <img src="empregos/public/ImagensProjeto/Vagas.PNG" alt="drawing" width="180">
-    <img src="empregos/public/ImagensProjeto/CadastrarVagas.PNG" alt="drawing" width="180" >
+    <img src="empregos/public/ImagensProjeto/Vagas.PNG" alt="drawing" width="480">
+    <img src="empregos/public/ImagensProjeto/CadastrarVagas.PNG" alt="drawing" width="480" >
 </p>
 
 <h3>Módulo web</h3>
