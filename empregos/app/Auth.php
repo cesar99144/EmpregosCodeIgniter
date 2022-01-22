@@ -29,6 +29,7 @@ class Auth{
                     $session->set('emailUser', $data->email);
                     $session->set('sobrenomeUser', $data->sobrenome);
                     $session->set('nivelUser', $data->nivelRepresentante);
+                    $session->set('empresaUser', $data->empresaId);
                     $session->set('logado', true);
                    
                     return true;
