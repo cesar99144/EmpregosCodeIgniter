@@ -42,4 +42,31 @@ class Vagas extends ResourceController{
         
         return $this->failNotFound('Nenhum dado encontrado com'.$id);   
 	}
+
+	public function create(){
+
+		$vagasModel = new VagasModel;
+
+		$vagasModel->set('titulo', $this->request->getPost('tituloVaga'));
+		$vagasModel->set('descricao', $this->request->getPost('descricaoVaga'));
+		$vagasModel->set('RegimeContratacao', $this->request->getPost('RegimeContratacao'));
+		$vagasModel->set('cargaHoraria', $this->request->getPost('cargaHoraria'));
+		$vagasModel->set('tipoPresenca', $this->request->getPost('tipoPresenca'));
+		$vagasModel->set('faixaSalarial', $this->request->getPost('faixaSalarial'));
+		$vagasModel->set('categoriaId', $this->request->getPost('categoriaId'));
+		$vagasModel->set('empresaId', session()->empresaUser);
+		$vagasModel->set('statusVisibilidade', $this->request->getPost('status'));
+
+		if($vagasModel->insert()){
+
+			$vagasModel = new VagasModel;
+        	$data['listVagas'] = $vagasModel->where('empresaId', session()->idUser)->join('categorias', 'vagas.categoriaId = categorias.idCategoria')->findAll();
+        
+       		 return view('moduloRecrutador/vagas/listagem', $data);
+
+		}else{
+
+			print_r($vagasModel->error());
+		}
+	}
 }

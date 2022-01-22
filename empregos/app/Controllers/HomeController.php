@@ -6,7 +6,7 @@ class HomeController extends BaseController
 {
 	public function index()
 	{
-		return view('home/homePage');
+		return view('home/login');
 	}
 
 	//Cadastro recrutador
